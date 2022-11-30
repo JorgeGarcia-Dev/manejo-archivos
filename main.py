@@ -36,6 +36,10 @@ def validar_numeros(message):
 
 # Definimos la función, en donde centramos todo nuestro programa.
 def archivos():
+    """
+    La función "archivos()" pide al usuario que seleccione una opción de un menú y luego realiza la
+    acción correspondiente
+    """
 
     # En una variable indicamos que el valor inicial es de tipo Bool (True)
     preguntar = True
