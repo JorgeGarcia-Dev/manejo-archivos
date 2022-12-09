@@ -1,8 +1,8 @@
-import errno
 import os
 
-from rutas import current_path
-from rutas import carpeta_archivos
+from app.rutas import carpeta_archivos
+
+carpetas = []
 
 def crear():
 
@@ -16,59 +16,18 @@ def crear():
 
     # Por medio de un ciclo for, iteramos sobre nuestra carpeta de archivos.
     for fichero in carpeta_archivos.iterdir():
+        carpetas.append(fichero.suffix[1:])
 
-        if fichero.suffix == ".txt":
-            try:
-                os.mkdir('txts')
-            except OSError as e:
-                if e.errno != errno.EEXIST:
-                    raise
-
-        if fichero.suffix == ".jpg":
-            try:
-                os.mkdir('jpgs')
-            except OSError as e:
-                if e.errno != errno.EEXIST:
-                    raise
-
-        if fichero.suffix == ".jpeg":
-            try:
-                os.mkdir('jpegs')
-            except OSError as e:
-                if e.errno != errno.EEXIST:
-                    raise
-
-        if fichero.suffix == ".png":
-            try:
-                os.mkdir('pngs')
-            except OSError as e:
-                if e.errno != errno.EEXIST:
-                    raise
-
-        if fichero.suffix == ".pdf":
-            try:
-                os.mkdir('pdfs')
-            except OSError as e:
-                if e.errno != errno.EEXIST:
-                    raise
-
-        if fichero.suffix == ".mp3":
-            try:
-                os.mkdir('mp3s')
-            except OSError as e:
-                if e.errno != errno.EEXIST:
-                    raise
-
-        if fichero.suffix == ".mp4":
-            try:
-                os.mkdir('mp4s')
-            except OSError as e:
-                if e.errno != errno.EEXIST:
-                    raise
+    for c in carpetas:
+        try:
+            if not os.path.exists(f"{carpeta_archivos}/{c}s"):
+                os.mkdir(f"{carpeta_archivos}/{c}s")
+        except:
+            continue
 
     print("Se han creado las nuevas carpetas en base a su extensión: \n")
 
     # Iterando sobre current_path e imprimiendo los directorios.
-    for fichero in current_path.iterdir():
+    for fichero in carpeta_archivos.iterdir():
         if fichero.is_dir():
             print("·", fichero.name)

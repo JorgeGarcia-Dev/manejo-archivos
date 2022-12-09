@@ -7,7 +7,6 @@ from app.validar import validar_numeros
 from app.crear import crear
 from app.mover import mover
 from app.listar import listar
-from app.clasificar import clasificar
 
 # Definimos la función, en donde centramos todo nuestro programa.
 def archivos():
@@ -26,10 +25,9 @@ def archivos():
         # Imprimimos nuestro menú de opciones.
         print('Seleccione del Menú lo que desea hacer: \n')
         print('1) Listar Archivos \n')
-        print('2) Ver Archivos Clasificados \n')
-        print('3) Crear Carpetas para los Archivos \n')
-        print('4) Mover Archivos a Carpetas \n')
-        print('5) Salir \n')
+        print('2) Crear Carpetas para los Archivos \n')
+        print('3) Mover Archivos a Carpetas \n')
+        print('4) Salir \n')
 
         # En una variable recibimos los valores u opciones que el usuario requiere.
         opcion = validar_numeros("una opción: \r\n")
@@ -43,20 +41,15 @@ def archivos():
         # Nuestra segunda opción, lista los archivos, clasificándolos por medio de su extensión.
         elif opcion == 2:
 
-            clasificar()
+            crear()
 
         # Nuestra tercera opción, crea las carpetas para los archivos en base a su extensión.
         elif opcion == 3:
 
-            crear()
-
-        # Nuestra cuarta opción, mueve los archivos desde la carpeta Archivos, a sus respectivas carpetas creadas por su tipo de extensión.
-        elif opcion == 4:
-
             mover()
 
         # Nuestra quinta y última opción, termina el programa.
-        elif opcion == 5:
+        elif opcion == 4:
             print("Programa terminado, ha sido un gusto servirte... \n")
             # Por medio de 'break' rompemos la iteración del ciclo while, terminando así nuestro programa.
             break

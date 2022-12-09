@@ -1,4 +1,4 @@
-from rutas import carpeta_archivos
+from app.rutas import carpeta_archivos
 
 def listar():
 
@@ -8,5 +8,6 @@ def listar():
 
     print("Los archivos en la carpeta son: \n")
     for fichero in carpeta_archivos.iterdir():
-        print(fichero.name)
+        if fichero.is_file():
+            print(fichero.name)
     print('\n')

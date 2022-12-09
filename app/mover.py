@@ -1,6 +1,6 @@
 import shutil
 
-from rutas import *
+from app.rutas import *
 
 def mover():
 
@@ -12,23 +12,5 @@ def mover():
     # Iteramos en nuestra carpeta de archivos.
     for fichero in carpeta_archivos.iterdir():
 
-        if fichero.suffix == ".txt":
-            shutil.move(str(carpeta_archivos/fichero), str(destination_txts))
-
-        if fichero.suffix == ".jpg":
-            shutil.move(str(carpeta_archivos/fichero), str(destination_jpgs))
-
-        if fichero.suffix == ".jpeg":
-            shutil.move(str(carpeta_archivos/fichero), str(destination_jpegs))
-
-        if fichero.suffix == ".png":
-            shutil.move(str(carpeta_archivos/fichero), str(destination_pngs))
-
-        if fichero.suffix == ".pdf":
-            shutil.move(str(carpeta_archivos/fichero), str(destination_pdfs))
-
-        if fichero.suffix == ".mp3":
-            shutil.move(str(carpeta_archivos/fichero), str(destination_mp3s))
-
-        if fichero.suffix == ".mp4":
-            shutil.move(str(carpeta_archivos/fichero), str(destination_mp4s))
+        if fichero.is_file():
+            shutil.move(str(fichero), str(f"{carpeta_archivos}/{fichero.suffix[1:]}s"))
