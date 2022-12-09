@@ -22,13 +22,11 @@ Al iniciar el programa, se desplegará un menú de opciones, en las cuales se ej
 
   * **La primera opción (opción: 1)**
     * Lista todos los archivos que se encuentran dentro de     la carpeta indicada.
-  * **La segunda opción (opción: 2)**
-    * Clasifica y lista los archivos en base a su extensión.
-  * **La tercera opción (opción: 3)**
+  * **La tercera opción (opción: 2)**
     * Crea las carpetas de destinos para cada tipo de archivo y su extensión.
-  * **La cuarta opción (opción: 4)**
+  * **La cuarta opción (opción: 3)**
     * Mueve los archivos hacia las carpetas credadas en el paso anterior, identificando su extensión.
-  * **La quinta y última opción (opción: 5)**
+  * **La quinta y última opción (opción: 4)**
     * Termina el programa. 
 
 ___
@@ -38,4 +36,4 @@ ___
 
 ---
 
-[Documentación - Manejo de Archivos con Python](https://drive.google.com/file/d/1HIWdAPiZi0InlwLLwVwRI23ygs-Ym1V7/view?usp=sharing)
+[Documentación - Manejo de Archivos con Python](https://drive.google.com/file/d/1asMUefK-ZY_jqYIAWFanAKGiiiHs4X5G/view?usp=share_link)
