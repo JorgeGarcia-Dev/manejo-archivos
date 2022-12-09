@@ -33,22 +33,22 @@ def archivos():
         opcion = validar_numeros("una opción: \r\n")
 
         # Nuestra primer opción, y si el usuario ingresa el valor de '1',
-        # será la de listar todos los archivos que se encuentran en nuestra carpeta de Archivos.
+        # será la de listar todos los archivos que se encuentran en nuestra carpeta principal (carpeta_archivos).
         if opcion == 1:
 
             listar()
 
-        # Nuestra segunda opción, lista los archivos, clasificándolos por medio de su extensión.
+        # Nuestra segunda opción, crea las carpetas para los archivos en base a su extensión.
         elif opcion == 2:
 
             crear()
 
-        # Nuestra tercera opción, crea las carpetas para los archivos en base a su extensión.
+        # Nuestra tercera opción, mueve los archivos hacia su nueva carpeta, creada en el paso 2.
         elif opcion == 3:
 
             mover()
 
-        # Nuestra quinta y última opción, termina el programa.
+        # Nuestra cuarta y última opción, termina el programa.
         elif opcion == 4:
             print("Programa terminado, ha sido un gusto servirte... \n")
             # Por medio de 'break' rompemos la iteración del ciclo while, terminando así nuestro programa.

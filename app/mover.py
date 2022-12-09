@@ -5,8 +5,8 @@ from app.rutas import *
 def mover():
 
     """
-    Iteramos a través de nuestra carpeta de archivos, y si los archivos tienen la extensión '.txt','.jpg','.jpeg',
-    '.png', '.pdf', '.mp3' ó '.mp4' los movemos a su respectiva carpeta de destino.
+    Iteramos a través de nuestra carpeta de archivos, y dependiendo de su extensión,
+    éstos los movemos a su respectiva carpeta de destino antes creada.
     """
 
     # Iteramos en nuestra carpeta de archivos.

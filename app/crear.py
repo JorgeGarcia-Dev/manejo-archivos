@@ -5,19 +5,20 @@ from app.rutas import carpeta_archivos
 carpetas = []
 
 def crear():
+    """
+    Iteramos sobre los archivos en la carpeta y luego creamos una nueva carpeta para cada extensión de archivo.
+    """
 
-    """
-    Si la extensión del archivo es .txt, cree una carpeta llamada txts. Si la extensión del archivo es .jpg, cree un
-    carpeta llamada jpgs. Si la extensión del archivo es .jpeg, cree una carpeta llamada jpegs. Si el archivo
-    extensión es .png, cree una carpeta llamada pngs. Si la extensión del archivo es .pdf, cree una carpeta
-    llamados pdf. Si la extensión del archivo es .mp3, cree una carpeta llamada mp3s. Si la extensión del archivo es
-    .mp4, crea una carpeta llamada mp4s
-    """
+    
 
     # Por medio de un ciclo for, iteramos sobre nuestra carpeta de archivos.
     for fichero in carpeta_archivos.iterdir():
+        # Indicamos que agregue la extensión de los archivos a la lista(carpetas)
         carpetas.append(fichero.suffix[1:])
 
+    # Recorremos los elementos de la lista (carpetas),
+    # condicionando que si no se encuentra, cree una nueva carpeta,
+    # o simplemente omita alguna acción y continue si ya ha sido creada.
     for c in carpetas:
         try:
             if not os.path.exists(f"{carpeta_archivos}/{c}s"):
@@ -27,7 +28,7 @@ def crear():
 
     print("Se han creado las nuevas carpetas en base a su extensión: \n")
 
-    # Iterando sobre current_path e imprimiendo los directorios.
+    # Iterando sobre la carpeta principal (carpeta_archivos) e imprimiendo los directorios.
     for fichero in carpeta_archivos.iterdir():
         if fichero.is_dir():
             print("·", fichero.name)
