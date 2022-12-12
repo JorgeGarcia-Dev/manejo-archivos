@@ -1,3 +1,4 @@
+import errno
 import os
 
 from app.rutas import carpeta_archivos
@@ -18,13 +19,16 @@ def crear():
 
     # Recorremos los elementos de la lista (carpetas),
     # condicionando que si no se encuentra, cree una nueva carpeta,
-    # o simplemente omita alguna acción y continue si ya ha sido creada.
+    # o manejamos el error 'OSError' con errno.
     for c in carpetas:
+        
         try:
             if not os.path.exists(f"{carpeta_archivos}/{c}s"):
                 os.mkdir(f"{carpeta_archivos}/{c}s")
-        except:
-            continue
+                
+        except OSError as e:
+            if e.errno != errno.EEXIST:
+                raise
 
     print("Se han creado las nuevas carpetas en base a su extensión: \n")
 
