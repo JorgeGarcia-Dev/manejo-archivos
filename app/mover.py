@@ -17,6 +17,6 @@ def mover():
                 shutil.move(str(fichero), str(f"{carpeta_archivos}/{fichero.suffix[1:]}s"))
         
         except shutil.Error as err:
-            print("No hay más archivos que mover.")
+            print("Este archivo no puede ser procesado.")
     
     print("Todos tus archivos se encuentran en su nueva ubicación.")
