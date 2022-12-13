@@ -18,7 +18,17 @@ Esta es una aplicación para identificar archivos en carpetas, clasificarlos, cr
 
 ---
 
-Al iniciar el programa, se desplegará un menú de opciones, en las cuales se ejecutará diferente acciones dependiendo de cual se elija, se recomienda ir en orden ascendente, comenzando por el paso 1.
+Al iniciar el programa, se solicitará al usuario ingresar la ruta hacia la carpeta o directorio en donde se encuentran los archivos que se ordenarán.
+
+**Ejemplo:**
+
+```
+/Users/jorgeegarciadev/Downloads
+```
+
+---
+
+A continuación, se desplegará un menú de opciones, en las cuales se ejecutará diferente acciones dependiendo de cual se elija, se recomienda ir en orden ascendente, comenzando por el paso 1.
 
   * **La primera opción (opción: 1)**
     * Lista todos los archivos que se encuentran dentro de     la carpeta indicada.
