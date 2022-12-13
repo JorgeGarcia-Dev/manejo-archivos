@@ -12,5 +12,11 @@ def mover():
     # Iteramos en nuestra carpeta de archivos.
     for fichero in carpeta_archivos.iterdir():
 
-        if fichero.is_file():
-            shutil.move(str(fichero), str(f"{carpeta_archivos}/{fichero.suffix[1:]}s"))
+        try:
+            if fichero.is_file():
+                shutil.move(str(fichero), str(f"{carpeta_archivos}/{fichero.suffix[1:]}s"))
+        
+        except shutil.Error as err:
+            print("No hay más archivos que mover.")
+    
+    print("Todos tus archivos se encuentran en su nueva ubicación.")
