@@ -32,11 +32,11 @@ A continuación, se desplegará un menú de opciones, en las cuales se ejecutar�
 
   * **La primera opción (opción: 1)**
     * Lista todos los archivos que se encuentran dentro de     la carpeta indicada.
-  * **La tercera opción (opción: 2)**
+  * **La segunda opción (opción: 2)**
     * Crea las carpetas de destinos para cada tipo de archivo y su extensión.
-  * **La cuarta opción (opción: 3)**
+  * **La tercera opción (opción: 3)**
     * Mueve los archivos hacia las carpetas credadas en el paso anterior, identificando su extensión.
-  * **La quinta y última opción (opción: 4)**
+  * **La cuarta y última opción (opción: 4)**
     * Termina el programa. 
 
 ___
