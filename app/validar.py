@@ -1,6 +1,6 @@
-# Con esta función, validamos que los datos que ingresa el usuario, son de tipo int().
+# Con esta función, validamos que los datos
+# que ingresa el usuario, son de tipo int().
 def validar_numeros(message):
-
     """
     Toma una cadena como argumento y devuelve un número entero
     :param.
